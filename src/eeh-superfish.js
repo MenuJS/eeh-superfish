@@ -1,16 +1,20 @@
 (function (angular) {
     'use strict';
 
-    angular.module('demo').directive('eehSuperfish', function () {
+    var SuperfishDirective = function () {
         return {
             restrict: 'A',
-            link: function (scope, element) {
+            link: function (scope, element, attributes) {
                 var menuElement = element.find('> ul');
                 menuElement.addClass('sf-menu');
+                var config = angular.isDefined(attributes.eehSuperfish) ?
+                    angular.fromJson(attributes.eehSuperfish) : {};
                 scope.$on('$includeContentLoaded', function () {
-                    menuElement.superfish();
+                    menuElement.superfish(config);
                 });
             }
         };
-    });
+    };
+
+    angular.module('eehSuperfish', []).directive('eehSuperfish', SuperfishDirective);
 })(angular);
