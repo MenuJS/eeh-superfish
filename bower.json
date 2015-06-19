@@ -1,0 +1,25 @@
+{
+  "name": "eeh-superfish",
+  "version": "0.0.0",
+  "authors": [
+    "Ethan Hann <ethanhann@gmail.com>"
+  ],
+  "description": "An AngularJS Superfish module.",
+  "main": "src/eeh-superfish.js",
+  "keywords": [
+    "AngularJS",
+    "Menu",
+    "Navigation",
+    "Superfish",
+    "eehNavigation",
+    "eeh"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
