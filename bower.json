@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "superfish": "~1.7.5"
+    "angular": ">=1.2",
+    "superfish": ">=1.6"
   }
 }
