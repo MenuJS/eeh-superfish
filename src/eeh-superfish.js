@@ -7,8 +7,7 @@
             link: function (scope, element, attributes) {
                 var menuElement = element.find('> ul');
                 menuElement.addClass('sf-menu');
-                var config = angular.isDefined(attributes.eehSuperfish) ?
-                    angular.fromJson(attributes.eehSuperfish) : {};
+                var config = attributes.eehSuperfish !== "" ? angular.fromJson(attributes.eehSuperfish) : {};
                 scope.$on('$includeContentLoaded', function () {
                     menuElement.superfish(config);
                 });
